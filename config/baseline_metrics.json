@@ -1,0 +1,13 @@
+{
+  "source": "Predictive_Analytics_Project_Final.ipynb (Colab run, Phase 5.E / Phase 6)",
+  "model": "GradientBoostingClassifier",
+  "best_params": {"n_estimators": 200, "learning_rate": 0.1, "max_depth": 3, "subsample": 0.8, "random_state": 42},
+  "accuracy": 0.7281,
+  "weighted_f1": 0.7229,
+  "cleaned_rows": 20327,
+  "model_rows": 14840,
+  "n_train": 11872,
+  "n_test": 2968,
+  "n_features": 41,
+  "split": {"test_size": 0.2, "random_state": 42, "stratified": true}
+}

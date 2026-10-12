@@ -1,0 +1,26 @@
+# secrets
+.env
+
+# generated artifacts (rebuilt by the pipeline)
+data/raw/bgg_raw.parquet
+data/staging/*
+data/curated/*
+outputs/predictions.csv
+outputs/metrics.json
+outputs/metrics_comparison.json
+outputs/run_summary.json
+outputs/model.joblib
+benchmarks/results.json
+benchmarks/partitions/
+state/*
+logs/*
+
+# python / tooling
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.ipynb_checkpoints/
+desktop.ini
+!**/.gitkeep

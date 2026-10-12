@@ -1,0 +1,13 @@
+dataset: bgg_dataset.csv
+description: BoardGameGeek games table (one row per game) used to predict a 3-class rating category
+file: data/raw/bgg_dataset.csv
+format: {delimiter: ";", decimal: ",", encoding: utf-8-sig}
+checksum:
+  algorithm: sha256
+  sha256: 9ae844b71dd4d9f999ca4f0b43d606478a2f6886586ccb1e7a7fb5e17d7e5651
+size_bytes: 2444831
+expected_rows: 20343          # data rows, excluding header
+expected_columns: 14
+source_url: TODO              # fill in where you originally downloaded the dataset
+license: TODO                 # fill in the dataset license / terms
+privacy_note: Public board-game metadata; no personal data.

@@ -1,0 +1,8 @@
+# Runner image for the pipeline (manual execution, tests, benchmark)
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+ENV PYTHONPATH=/app PYTHONUNBUFFERED=1
+CMD ["python", "-m", "src.run_pipeline"]

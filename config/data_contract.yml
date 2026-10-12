@@ -1,0 +1,23 @@
+dataset: bgg_games
+version: 1
+key: [ID]
+on_violation: fail        # raise DataQualityError, stop the run; nothing reaches model outputs
+columns:
+  - {name: ID,                 type: int,    required: true}
+  - {name: Name,               type: string, required: true}
+  - {name: Year Published,     type: int,    required: true, min: 0, max: 2026}
+  - {name: Min Players,        type: int,    required: true, min: 1}
+  - {name: Max Players,        type: int,    required: true, min: 1}
+  - {name: Play Time,          type: int,    required: true, min: 1}
+  - {name: Min Age,            type: int,    required: true, min: 1}
+  - {name: Users Rated,        type: int,    required: true, min: 0}
+  - {name: Rating Average,     type: float,  required: true, min: 1.0, max: 10.0}
+  - {name: BGG Rank,           type: int,    required: true, min: 0}
+  - {name: Complexity Average, type: float,  required: true, min: 1.0, max: 5.0}
+  - {name: Owned Users,        type: int,    required: true, min: 0}
+  - {name: Mechanics,          type: string, required: true}
+  - {name: Domains,            type: string, required: true}
+rules:
+  min_players_le_max_players: true   # business rule (curated)
+  target_classes: [0, 1, 2]          # model_ready category check
+  min_class_share: 0.01              # each target class must be >= 1% of rows (guards silent model damage)
