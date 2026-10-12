@@ -8,6 +8,6 @@ checksum:
 size_bytes: 2444831
 expected_rows: 20343          # data rows, excluding header
 expected_columns: 14
-source_url: TODO              # fill in where you originally downloaded the dataset
-license: TODO                 # fill in the dataset license / terms
+source_url: TODO            
+license: TODO                
 privacy_note: Public board-game metadata; no personal data.
