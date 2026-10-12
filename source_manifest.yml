@@ -8,6 +8,8 @@ checksum:
 size_bytes: 2444831
 expected_rows: 20343          # data rows, excluding header
 expected_columns: 14
-source_url: TODO            
-license: TODO                
+source_url: https://www.kaggle.com/datasets/andrewmvd/board-games
+license: CC BY 4.0   # verify on the Kaggle page's License field
+citation: 'Dilini Samarasinghe, July 5, 2021, "BoardGameGeek Dataset on Board Games", IEEE Dataport, doi: 10.21227/9g61-bs59'
+collected: February 2021 (scraped from BoardGameGeek; ranked games only)             
 privacy_note: Public board-game metadata; no personal data.
