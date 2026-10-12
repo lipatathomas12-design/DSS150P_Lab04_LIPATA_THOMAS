@@ -15,7 +15,6 @@ services:
       interval: 5s
       retries: 10
 
-  # One-shot runner:  docker compose run --rm pipeline [args]
   pipeline:
     build: .
     profiles: ["run"]
@@ -35,7 +34,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.airflow
-    command: standalone          # SQLite metadata DB; fine for a lab, not for production
+    command: standalone        
     depends_on:
       postgres:
         condition: service_healthy

@@ -1,4 +1,3 @@
-# Runner image for the pipeline (manual execution, tests, benchmark)
 FROM python:3.11-slim
 WORKDIR /app
 COPY requirements.txt .

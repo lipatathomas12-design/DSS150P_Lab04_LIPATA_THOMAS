@@ -25,22 +25,21 @@ source URL and license there). Re-compute checksum values with `python scripts/u
 ```bash
 docker compose up -d postgres
 docker compose run --rm pipeline                       # full run
-docker compose run --rm pipeline python -m src.run_pipeline   # same thing
 docker compose run --rm pipeline python -m pytest -q  # tests
 docker compose run --rm pipeline python -m src.verify_rerun   # duplicate-key check
 docker compose run --rm pipeline python -m benchmarks.storage_benchmark
 ```
 **Local venv**
 ```bash
-python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
+python -m venv .venv && source .venv/bin/activate    
 pip install -r requirements.txt
-python -m src.run_pipeline --no-db                     # without PostgreSQL
-python -m src.run_pipeline                             # with PostgreSQL (.env)
+python -m src.run_pipeline --no-db                    
+python -m src.run_pipeline                            
 ```
 **Airflow**
 ```bash
-docker compose up -d --build airflow     # UI: http://localhost:8080
-docker compose logs airflow | grep -i password    # standalone prints the admin password
+docker compose up -d --build airflow    
+docker compose logs airflow | grep -i password    
 ```
 Trigger DAG `bgg_pipeline` (config `{"mode":"full"}`). Tasks:
 `verify_source >> ingest_raw >> build_staging >> build_curated >> load_postgres >> build_features >> train_model >> compare_metrics >> finalize_run`.
