@@ -1,5 +1,3 @@
-"""CSV vs JSON vs Parquet vs PostgreSQL on the SAME logical records (curated layer),
-plus a Parquet partition demo.   python -m benchmarks.storage_benchmark"""
 import json
 import shutil
 import warnings
@@ -40,7 +38,7 @@ def main():
         results[fmt] = {"write_s": w, "read_s": r, "size_mb": round(path.stat().st_size / 1e6, 3), "rows": len(back)}
         id_sets[fmt] = set(back["ID"])
 
-    try:                                           # PostgreSQL (skipped if no database is reachable)
+    try:                                         
         from src.load_postgres import connect
         conn = connect()
         def pg_write():
@@ -69,7 +67,7 @@ def main():
     ref = id_sets["csv"]
     same = all(s == ref for s in id_sets.values())
 
-    # partition demo: Parquet partitioned by decade of publication, read ONE partition
+   
     part_dir = ROOT / "benchmarks" / "partitions"
     shutil.rmtree(part_dir, ignore_errors=True)
     df.assign(decade=(df["Year Published"] // 10 * 10).astype(int)).to_parquet(
