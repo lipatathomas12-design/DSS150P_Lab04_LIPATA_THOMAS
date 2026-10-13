@@ -1,4 +1,3 @@
-"""Config, structured logging, and run records shared by all stages."""
 import json
 import os
 import re

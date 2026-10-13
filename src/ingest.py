@@ -1,9 +1,3 @@
-"""Raw layer: checksum verification, full load, and checkpointed incremental load.
-
-The dataset has no natural update timestamp, so incremental ingestion is simulated
-by loading the next N rows by source row number. The checkpoint (state/checkpoint.json)
-is a pipeline-generated position marker, not a business timestamp.
-"""
 import hashlib
 import json
 import os

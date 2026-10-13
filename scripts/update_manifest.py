@@ -1,5 +1,3 @@
-"""Recompute the source checksum/row count and print YAML to paste into source_manifest.yml.
-    python scripts/update_manifest.py"""
 import sys
 from pathlib import Path
 
