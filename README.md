@@ -11,7 +11,7 @@
 
 ## 1. Purpose
 
-This repository re-engineers the group predictive-analytics notebook (BoardGameGeek games -> 3-class `Rating Category`, Gradient Boosting) into a reproducible, rerun-safe data product. The goal is not a better model. It is that anyone can clone the repo, place the same source file, run the pipeline and regenerate the baseline result.
+In this lab I rebuilt our group predictive-analytics notebook (BoardGameGeek games -> 3-class `Rating Category`, Gradient Boosting) into a pipeline that can be rerun and reproduced. The goal is not a better model. It is that anyone can clone the repo, place the same source file, run the pipeline and regenerate the baseline result.
 
 Pipeline: `source -> raw -> staging -> curated -> model-ready -> model -> predictions/metrics`, orchestrated by Apache Airflow, stored in PostgreSQL, checked by data-quality rules and compared automatically with the baseline metrics.
 
@@ -79,7 +79,7 @@ outputs/       metrics, predictions, comparison, run summary
 - Docker Desktop with Docker Compose, **or** Python 3.11+ and PostgreSQL 16.
 - Pinned versions are in `requirements.txt` (pandas 2.2.2, numpy 1.26.4, scikit-learn 1.5.1, pyarrow 16.1.0, psycopg2-binary 2.9.9, joblib 1.4.2).
 
-## 5. Setup (clean machine)
+## 5. Setup
 
 ```powershell
 git clone https://github.com/lipatathomas12-design/DSS150P_Lab04_LIPATA_THOMAS.git
