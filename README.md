@@ -187,8 +187,7 @@ Answers to the 15 required analysis questions: `docs/analysis_and_reflection.md`
 
 ## 13. Attribution and AI use
 
-- Prior work: the group project notebook `Predictive_Analytics_Project_Final.ipynb` (group / project title: <fill in>) supplies the problem, target, feature definitions and hyperparameters.
-- Other code sources: <state any code adapted from other repositories, including classmates', and what you changed>.
+- Prior work: the group project notebook `Predictive_Analytics_Project_Final.ipynb` (group / project title:) supplies the problem, target, feature definitions and hyperparameters.
 - AI assistance: Claude (Anthropic) was used for debugging help (Airflow, Docker, Git), documentation drafting and review. In this lab I used it to help with Git and PowerShell commands, to debug Airflow and Docker problems, and to draft the README and the reflection answers, which I then reviewed and edited. All code and documentation were reviewed by me.
 
 ## 14. Troubleshooting
