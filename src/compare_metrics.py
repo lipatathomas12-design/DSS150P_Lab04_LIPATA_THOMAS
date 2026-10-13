@@ -1,4 +1,3 @@
-"""Machine-readable comparison of baseline (notebook) vs reproduced metrics."""
 import json
 
 from .common import load_config, resolve

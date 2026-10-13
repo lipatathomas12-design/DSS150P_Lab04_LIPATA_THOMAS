@@ -1,4 +1,3 @@
-"""Retrain + evaluate from the model-ready layer (never from copied numbers)."""
 import hashlib
 import json
 import platform
