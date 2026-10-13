@@ -1,5 +1,3 @@
-"""Curated layer: cleaning rules (imputation, invalid-value fixes, final types).
-Rules and order mirror Phase 1.3-1.5 of the original notebook."""
 import numpy as np
 
 from .common import utcnow

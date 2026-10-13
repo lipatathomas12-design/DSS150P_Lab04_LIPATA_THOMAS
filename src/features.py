@@ -1,5 +1,3 @@
-"""Model-ready layer: preprocessing, feature engineering, stratified split, scaling.
-Mirrors Phases 2-4 of the original notebook (same order, same parameters)."""
 from collections import Counter
 
 import numpy as np

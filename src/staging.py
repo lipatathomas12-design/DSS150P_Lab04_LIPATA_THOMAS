@@ -1,5 +1,3 @@
-"""Staging layer: typed, standardized, de-duplicated. No imputation, no row dropping
-other than duplicate IDs (those decisions belong to curated)."""
 import numpy as np
 import pandas as pd
 
