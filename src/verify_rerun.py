@@ -1,6 +1,3 @@
-"""Prove rerun safety: row counts and duplicate business keys per PostgreSQL table.
-Run before and after a second pipeline run; the numbers must not change.
-    python -m src.verify_rerun"""
 import json
 
 from .common import ROOT, utcnow

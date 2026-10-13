@@ -1,8 +1,3 @@
-"""Data-quality assertions driven by config/data_contract.yml.
-
-Five assertion families: schema, completeness, uniqueness, validity (type/range/category),
-and project-specific business/model rules. Violations raise DataQualityError
-(contract: on_violation = fail), so bad data never reaches model outputs."""
 import pandas as pd
 import yaml
 

@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-12T16:30:02.255428+00:00",
+  "tables": {
+    "raw.bgg_games": {
+      "rows": 20343,
+      "duplicate_keys": 0
+    },
+    "staging.bgg_games": {
+      "rows": 20327,
+      "duplicate_keys": 0
+    },
+    "curated.bgg_games": {
+      "rows": 20327,
+      "duplicate_keys": 0
+    },
+    "ml.predictions": {
+      "rows": 2968,
+      "duplicate_keys": 0
+    }
+  }
+}
