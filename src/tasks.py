@@ -1,5 +1,3 @@
-"""One function per pipeline task. Used by both the CLI (run_pipeline.py) and the Airflow DAG.
-Tasks communicate only through files in data/ and state/, so each can be re-run on its own."""
 import json
 
 import pandas as pd

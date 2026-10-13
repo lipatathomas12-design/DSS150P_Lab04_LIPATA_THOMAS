@@ -1,5 +1,3 @@
-"""Airflow DAG: same task functions as the CLI (src/tasks.py).
-Trigger with config, e.g. {"mode": "full"} or {"mode": "incremental", "batch_size": 5000}."""
 from datetime import datetime, timedelta
 
 from airflow import DAG
@@ -7,7 +5,7 @@ from airflow.operators.python import PythonOperator
 
 from src import tasks
 
-RUN = "{{ run_id }}"   # sanitized inside src.common.Run
+RUN = "{{ run_id }}"  
 
 default_args = {"owner": "fernand", "retries": 2, "retry_delay": timedelta(seconds=30)}
 
