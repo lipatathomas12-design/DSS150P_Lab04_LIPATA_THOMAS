@@ -7,7 +7,7 @@ from src import tasks
 
 RUN = "{{ run_id }}"  
 
-default_args = {"owner": "fernand", "retries": 2, "retry_delay": timedelta(seconds=30)}
+default_args = {"owner": "Thomas", "retries": 2, "retry_delay": timedelta(seconds=30)}
 
 with DAG(
     dag_id="bgg_pipeline",
