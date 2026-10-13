@@ -1,4 +1,3 @@
-"""End-to-end (no database): determinism, rerun safety, incremental checkpoint, baseline match."""
 import json
 
 import pandas as pd

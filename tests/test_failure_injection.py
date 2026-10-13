@@ -1,4 +1,3 @@
-"""Safe, reversible failure injection on TEMPORARY copies of the source."""
 import pandas as pd
 import pytest
 
