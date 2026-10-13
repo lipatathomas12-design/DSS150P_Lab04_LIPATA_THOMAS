@@ -1,5 +1,17 @@
+# secrets
+.venv
+.git
 .env
+__pycache__
+.pytest_cache
+data/staging
+data/curated
+data/raw/bgg_raw.parquet
+outputs
+state
+logs
 
+# generated artifacts (rebuilt by the pipeline)
 data/raw/bgg_raw.parquet
 data/staging/*
 data/curated/*
@@ -13,7 +25,7 @@ benchmarks/partitions/
 state/*
 logs/*
 
-# python 
+# python / tooling
 __pycache__/
 *.pyc
 .pytest_cache/
