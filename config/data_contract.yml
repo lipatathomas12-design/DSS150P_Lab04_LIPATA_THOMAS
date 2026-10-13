@@ -1,7 +1,7 @@
 dataset: bgg_games
 version: 1
 key: [ID]
-on_violation: fail        # raise DataQualityError, stop the run; nothing reaches model outputs
+on_violation: fail       
 columns:
   - {name: ID,                 type: int,    required: true}
   - {name: Name,               type: string, required: true}

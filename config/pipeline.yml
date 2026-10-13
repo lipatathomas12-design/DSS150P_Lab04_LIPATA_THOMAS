@@ -1,4 +1,4 @@
-paths:                     # all relative to the repo root (no machine-specific paths)
+paths:                    
   source_csv: data/raw/bgg_dataset.csv
   manifest: source_manifest.yml
   contract: config/data_contract.yml
@@ -12,10 +12,10 @@ paths:                     # all relative to the repo root (no machine-specific 
   logs: logs
 
 ingestion:
-  incremental_batch_size: 5000   # pipeline-generated checkpoint, NOT a business timestamp
+  incremental_batch_size: 5000  
 
 features:
-  current_year: 2026             # fixed so Game Age is deterministic
+  current_year: 2026            
   top_mechanics: 20
   outlier_columns: [Play Time, Min Age, Users Rated, Complexity Average, Owned Users]
 
@@ -29,7 +29,7 @@ split:
 
 model:
   name: GradientBoostingClassifier
-  params:                        # tuned params taken from the original notebook's GridSearchCV
+  params:                        
     n_estimators: 200
     learning_rate: 0.1
     max_depth: 3
