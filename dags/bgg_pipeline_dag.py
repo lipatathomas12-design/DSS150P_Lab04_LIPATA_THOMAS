@@ -7,7 +7,7 @@ from src import tasks
 
 RUN = "{{ run_id }}"  
 
-default_args = {"owner": "Thomas", "retries": 2, "retry_delay": timedelta(seconds=30)}
+default_args = {"owner": "thomas lipata", "retries": 2, "retry_delay": timedelta(seconds=30)}
 
 with DAG(
     dag_id="bgg_pipeline",
@@ -17,6 +17,7 @@ with DAG(
     catchup=False,
     default_args=default_args,
     params={"mode": "full", "batch_size": 5000, "source_path": ""},
+    render_template_as_native_obj=True,   # <-- added: "5000" renders as the int 5000
     tags=["dss150p", "bgg"],
 ) as dag:
     verify = PythonOperator(task_id="verify_source", python_callable=tasks.verify_source,
