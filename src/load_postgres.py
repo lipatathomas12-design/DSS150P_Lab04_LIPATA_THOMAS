@@ -1,5 +1,3 @@
-"""PostgreSQL loads. Every load is an upsert keyed on the business/primary key inside one
-transaction, so retrying a task (even after an unacknowledged commit) cannot create duplicates."""
 import json
 import os
 

@@ -1,11 +1,10 @@
--- Idempotent: safe to run on every pipeline start.
 CREATE SCHEMA IF NOT EXISTS raw;
 CREATE SCHEMA IF NOT EXISTS staging;
 CREATE SCHEMA IF NOT EXISTS curated;
 CREATE SCHEMA IF NOT EXISTS ml;
 CREATE SCHEMA IF NOT EXISTS audit;
 
--- raw: faithful text copy + ingestion audit columns. Immutable (inserts only).
+
 CREATE TABLE IF NOT EXISTS raw.bgg_games (
     source_sha256      text        NOT NULL,
     source_row_number  integer     NOT NULL,
@@ -17,7 +16,6 @@ CREATE TABLE IF NOT EXISTS raw.bgg_games (
     PRIMARY KEY (source_sha256, source_row_number)
 );
 
--- staging: typed + de-duplicated on the business key (id)
 CREATE TABLE IF NOT EXISTS staging.bgg_games (
     id bigint PRIMARY KEY,
     source_row_number integer,
