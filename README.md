@@ -3,10 +3,10 @@
 | Field | Student Entry |
 |---|---|
 | Name | Thomas Lipata |
-| Student Number | <fill in> |
-| Section | <fill in> |
+| Student Number | 2024109933 |
+| Section | CM17 |
 | Previous Predictive Analytics Group / Project Title | <fill in> |
-| Dataset Name / Source | BoardGameGeek (BGG) games dataset, `bgg_dataset.csv` - source URL: <fill in> |
+| Dataset Name / Source | BoardGameGeek (BGG) games dataset, `bgg_dataset.csv` - source: https://www.kaggle.com/datasets/andrewmvd/board-games |
 | Predictive Task | Classification (3-class `Rating Category`: Low / Medium / High) |
 
 ## 1. Purpose
@@ -99,7 +99,7 @@ Get-FileHash data/raw/bgg_dataset.csv -Algorithm SHA256
 
 Compare the hash with `source_manifest.yml`. They must match. `.gitattributes` disables line-ending conversion for the CSV so the checksum stays stable on every OS. To recompute the manifest values: `python scripts/update_manifest.py`.
 
-Source and licence: BoardGameGeek data used by the previous group project. Source URL: <fill in>. License / redistribution terms: <fill in>. The dataset has no personal data. If redistribution is not permitted, remove the CSV from Git and keep only the manifest and these placement instructions.
+Source and licence: BoardGameGeek data used by the previous group project. Source URL: https://www.kaggle.com/datasets/andrewmvd/board-games (Kaggle, board-games dataset by andrewmvd). License / redistribution terms: <fill in>. The dataset has no personal data. If redistribution is not permitted, remove the CSV from Git and keep only the manifest and these placement instructions.
 
 ## 6. Run
 
